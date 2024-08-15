@@ -1,0 +1,21 @@
+ Questions: 
+1. What is an operating system? 
+2. Describe what an operating system is responsible for.    
+   * (This is a trick question, it's everything.) 
+3. What is the world's most popular operating system? 
+4. What are the top desktop operating systems?
+
+
+Answers:
+1. An operating system is the software of a computer that manages all of the computers hardware and software, while allowing the user to communicate with the computer [1].
+2. The OS coordinates all of the software and hardware to successfully run all the various processes. It also maintains the CPU, memory, and storage such that each process can run properly [1].
+3. The number one is Android, which is Linux kernel based. The next one is Windows and then IOS [2].
+4. Windows is the most popular by a large margin. Next one is OS X and then Linux [3].
+
+Resources: 
+*[1] https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/
+*[2] https://gs.statcounter.com/os-market-share
+*[3] https://gs.statcounter.com/os-market-share/desktop/worldwide
+
+Feedback: 
+*

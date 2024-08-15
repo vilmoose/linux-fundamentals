@@ -1,0 +1,12 @@
+Notes & Definitions:
+RTFM: read the fucking manual
+Man-pages: single pages taken out of a manual for a specific topic
+Tools you can use: -(LLM)Large Lanugage model; good for asking beginner questions & wayback machine; lets you see old pages.
+
+Hacking is a MINDSET, not a skillset. Things you should maintain interest in to succeed: 
+    -Things you want to learn how to do
+    -Things you want to learn more about
+    -Things you want to make
+    -Potential future reading material
+    -Links to things you want to remember
+

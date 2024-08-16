@@ -1,0 +1,97 @@
+Linux Command Line: 
+Part 1: Operating Systems
+An operating system is the interface between end user and the computer hardware. Hardware is controlled by firmware, which is code built unto the electronics that tell them how to run as individual components. Firmware is the OS for the hardware but on normal computers is not considered part of the OS users interact with.
+The kernel (the core of the OS) coordinates individual hardware componnents so that computer can run. 
+
+Responsibilites of an OS:
+-Processor management: OS prioritizes which processes are run by the CPUs at what time to ensure smooth execution.
+-Memory management: OS prioritizes what goes in RAM for the CPUs to access, if CPU needs info and it is not in RAM, the computer will be slow.
+-Device management: OS manages I/O dvices and passes to them to the required processes.
+-File mangement: OS keeps track and organizes files, and passes access to different processes.
+-Security: OS attempts to identify unauthorized use of files/memory and attempts to defend itself.
+-Logging and error detecting: OS savesinformation as it runs to logs to enable troubleshooting of processes.
+-System Performance: OS keeps track of how processes and the OS as a whole are running, and kills/pauses processes as required for smooth operation.
+
+Part 2: Linux History and Ubuntu
+Kernel is the lowest level of the OS that interacts with hardware, consider the heart of the OS. Once a kernel is written you can build whatever OS you want on top. UNIX was written by Ken Thompson and Dennis Ritchie at Bell Labs as the first modern OS. Since it was commercially licensed Linus Torvalds wanted to do better, and eventually wrote a new kernel known as Linux. This open-source, highly portable kernel became super popular. 
+Ubuntu (meaning humanity to others) was created by a group of developers in 2004 and made a company known as Canonical. Released Ubuntu for free and provided consulting services for companies that used it. Derived from Debian Unix-like OSs, but Ubuntu is meant to be easier to set up and use for begineers.
+Whatever OS is easiest to use at the moment will be the correct option, hence there is never a correct option for which OS to use. 
+
+Part 3: Shells
+Linux: Bash (Bourne Again SHell) is the default shell for many Linux based OSs
+Windows: CMD which is a legacy interface that allows access to DOS commands. Powershell is a fully featured interface and language that allows for complex scripting vida cmdlets and pipes. 
+
+Example via online shell: https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192 
+
+Commands to know:
+"ls" to list all files in directory.
+"cat" to print out content of a .txt file.
+"gcc filename.c -o name" to compile a C file.
+"./name" to run file.
+"whoami" tells who the current user is.
+"pwd" shows path of current directory.
+"ls -l" lists all files with long information (given by flag -l).
+	|->output of -l flag: is the following format:
+	|xxxxxxxxxx x firstname secondname size date filename|
+	-first 10 bits for file information: first bit tells us type of file and 	the remaining 9 are perimission bits (follow read/write/execute format for 	file owner/group/others)
+	-next bit tells use how many hard links there are to the file
+	-firstname is who owns the file
+	-secondname is group who owns a file (usually user unless part of a group)
+	-size is the file size in bytes
+	-date is the last time and date the file was modified
+	-filename is the file you are looking at the details of
+	Example: "drwxr-x--- 2 username groupname 4096 Jan 21 14:02 folder1" |
+"mkdir linuxPlayground" makes a new directory name linuxPlayground.
+"cd directoryPath" changes directory to specified path.
+"cd .." navigates back to previous directory - ".." signifies going up one level and "../.." signifies two levels, and so on.
+"echo text" prints text in terminal.
+"echo text > file1.txt" saves the text into specified file name.
+">" known as a redirectory and used to redirect the output of commands to files, it makes a new file. Takes the STDOUT of the echo command and sends it to a file.
+">>" used when appending to a back of an existing file, example: "echo bye >> file1.txt" appends the word bye to the specified file
+"cp file1.txt file2.txt" copies the first file into the second file
+"rm file1" deletes file1
+"rm -r folder1" rm with the specified flag -r will delete everything in folder1 recursively, including other folders inside it. CAUTION: make sure you are in the right directory as this can cause major issues if done in the wrong directory. Once a file is deleted using "rm" it will not be recoverable from the trash bin
+"touch file2.txt" updates the time stamp on the file || it can also create a new empty file with a timestamp set for when it was created.
+"mv file3.txt folder1/" moves the first file into the specified directory
+"history" pulls up a list of the commands you used most recently
+ 
+
+To get the man page of a command use the following template: "$man commandName", where commandName is the name of the command you want to know more about.
+Use https://man7.org/linux/man-pages/index.html to find it online.
+Use https://explainshell.com/ to get explanation of what a command line is doing.
+
+Part 4: Unix Philosophy
+A loose idea on how Unix OSs should be written and operated. 
+THE PHILOSOPHY: "Write programs that do one thing and do it well. Write programs to work together. Wite programst to handle text streams, because that is a universal interface."
+Posix Standard: The way to fix competing Unix distributions having different implementations (causing programs not to work across the various distributions) was to create a standardized method of interacting with the kernel and other preocesses. Note: BASH is only POSIX compatible, not POSIX compliant.
+Key takeaway: everything in the terminal should be able to speak to each other because everuthing speaks the same lagnuage of text streams. 
+STDIO: Standard Input and Output: standardized way of handling data streams, built on POSIX standard, allows all programs that use STDIO to be able to pass data between them in a controlled manner. STDIO consists of three data streams: STDIN, STDOUT, and STDERR.
+	|STDIN: Can be a key-press or a file we feed to system or a command. 	Referred to as the ear of the system. A file IO has a related thing known 	as file handle(often used to shorten commands), which is how the OS picks 	up a data stream with. File handle 0 represents STDIN data stream.
+	 SDTOUT: where the information is received from STDIN, usually tends to be 	a user's screen. STDOUT has the file handle 1.
+	 STDERR: does essentially the same as STDOUT but for errors. It is a 	separate data stream so that we can handle them differently and separately 	from the actual output we wanted. STDERR has the file handle 2. |
+Summary from website: 
+     STDIN (file descriptor 0):
+        -Standard Input - Often keyboard presses, but can also be redirected from 	another file or command
+        -You can specify STDIN with 0, STDOUT with 1, STDERR with 2 if you want to 	shorten a command
+    STDOUT (file descriptor 1):
+        -Standard Output - Sent to the terminal for display by default, but can be 	redirected into a file or another processes STDIN
+    STDERR (file descriptor 2):
+        -Standard Error - Usually sent to the terminal for display, this is a 	dedicated stream that programmers can use to send error messages
+        -Independent of STDOUT, STDOUT can be hidden/redirected while STDERR can be 	displayed/redirected as required
+File Descriptor (FD): 0,1,2 for STDIN, STDOUT, STDERR respectively.
+
+Pipes
+They are a form of redirection, but instead of going to files, the redirected streams go to other commands. They are represented with | and lets us chaing commands together. Pipes are unidirectional and only pass data from left to right.
+
+"uniq" reports or filters out repeated lines in a file (the tool that helps detect adjacent duplicate lines and deletes duplicate lines).
+"sort" sorts the contents of a text file, can sort: alphabetically, in reverse order, by number, by month, and can remove duplicates.
+Example: "cat file | sort | uniq" is the same as "sort < file | uniq"
+
+tee: a command name after T-shaped piping in real world plumbing. It passes the STDIN from another command's output through, while also writing a copy to a file. 
+Example: "cat animals | tee unsorted.txt | sort | uniq > sorted.txt" does the following: writes the output of cat animals into unsorted.txt and then writes the output of cat animals & sort & uniq into sorted.txt.
+
+
+
+
+
+

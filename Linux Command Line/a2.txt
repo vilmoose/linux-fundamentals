@@ -1,0 +1,14 @@
+Questions: 
+1. In your own words, describe what the command 'ls' does
+2. Describe what the command 'cat' does
+3. Describe what the command using 'gcc' does
+4. Describe what the program ./hello did
+
+Answers:
+1. It lists the visible files within the directory you are currently in.
+2. Reads and prints out the contents of a .txt file.
+3. "GNU Compiler Collection" is a toolchain that compiles code, links it with any library dependencies, converts that code to assembly, and then prepares the executable files [1]. 
+4. It ran the compiled C file and executed the code inside. In this case it printed "Hello world"
+
+Resources: 
+[1] https://www.incredibuild.com/integrations/gcc

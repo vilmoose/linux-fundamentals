@@ -1,0 +1,11 @@
+Questions: 
+1. cat 
+2. tee 
+3. sort 
+4. uniq
+
+Answers:
+1. Prints out the lines contained within a file.
+2. Reads the standard input (STDIN) and writes it to the STDOUT and one or more files.
+3. Sorts the contents of a text file, can sort: alphabetically, in reverse order, by number, by month, and can remove duplicates.
+4. Reports or filters out repeated lines in a file (the tool that helps detect adjacent duplicate lines and delets duplicate lines.

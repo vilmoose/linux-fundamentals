@@ -1,0 +1,24 @@
+Questions: 
+
+1. What is virtualization? 
+2. Why do we use virtualization? 
+3. What is the difference between the Host and a Guest VM? 
+4. What is the difference between a container and a VM? 
+5. What is the difference between VMs and the cloud? (Trick question)  Resources: 1. Google 
+
+Write up a few sentences for each in the usual format.
+
+
+
+Answers:  
+
+1. A way for an OS to run another, different kind of OS on top of itself. It abstracts hardware such that software can be used to mimic the OS we want to virtualize. 
+2. It gives us the ability to share resources between multiples OSs, which can allow servers to allocate resources on demand. It also lets us transfer the OS to another system and let it work on that system. Lastly, it gives assurance that we wont break the host environment (you have full freedom without repurcussions on your actual OS).
+3. Host VM is the actual OS running on the system while Guest VM is the virtualized OS.
+4. Containers are lightweight, protable, and self-contained executable images that contain software and their dependancies, while Vm's reprent instances of an operating system co-located on a physical machine through the use of a hypervisor [1].
+5. VMs use hypervisors to sit on top of physical hardware and abstracts the machine, while Cloud can be a collection of bare-metal, virtualization, or container software that can be used to abstract, pool, and share scalable resources across a network[2].
+
+Resources:
+
+ [1] https://cloud.google.com/discover/containers-vs-vms?hl=en
+ [2] https://www.redhat.com/en/topics/cloud-computing/cloud-vs-virtualization 

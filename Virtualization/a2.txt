@@ -1,0 +1,15 @@
+Questions: 
+1. Using the 'man' command, describe what the command using wget and the -O flag did 
+2. Using the 'man' command, describe what the command using gsettings did. 
+If that didn't work, explain what you did to get it to work. 
+
+Answers:
+1. wget: a non-interactive download of files via http, https, and ftp protocols. Non-interactive means it can work in the background without a user being logged on (allows you start a retrieval and disconnect from system).
+   -O: is accompanied with a filename into which all the downloaded files will be concatenated together and written to. Analogous to shell redirection.
+2. gsettings: offers a commandline interface for GSettings (gnome settings). It is essentially a way to change settings of applications through Dconf (which is the backend for Gnome).
+
+The file location had to be changed for the picture-uri but otherwise it worked !
+
+Resources: 
+0. Man 
+1. Google

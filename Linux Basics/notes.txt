@@ -1,0 +1,7 @@
+Linux Basics:
+
+man Pages:
+a resource used to provide information about commands, their flags, and what they do. This is done via:
+"man [name of command]"
+For information about man pages use command :'man man'
+

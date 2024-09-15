@@ -1,0 +1,14 @@
+Questions:
+1. What is a man-page?
+2. How do I pull up the man-page for the system call "read"?
+3. What can I learn from man-pages?
+
+Answers:
+1. A man page is a written out manual for a specified command, and all related attributes to that command.
+2. man read
+3. You can learn how commands work, what flags to specify for them, how to use them, and relevant information about it.
+
+
+Resources:
+
+-https://en.wikipedia.org/wiki/Man_page

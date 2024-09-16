@@ -1,7 +1,12 @@
 Linux Basics:
 
-man Pages:
+Man Pages:
 a resource used to provide information about commands, their flags, and what they do. This is done via:
 "man [name of command]"
 For information about man pages use command :'man man'
 
+Networking
+"ip addr" shows ip address of the device youre on.
+localhost (127.0.0.1) is a non routable ip address for internal purposes.
+
+Routing

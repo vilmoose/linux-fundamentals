@@ -81,7 +81,7 @@ Summary from website:
 File Descriptor (FD): 0,1,2 for STDIN, STDOUT, STDERR respectively.
 
 Pipes
-They are a form of redirection, but instead of going to files, the redirected streams go to other commands. They are represented with | and lets us chaing commands together. Pipes are unidirectional and only pass data from left to right.
+They are a form of redirection, but instead of going to files, the redirected streams go to other commands. They are represented with | and lets us chain commands together. Pipes are unidirectional and only pass data from left to right.
 
 "uniq" reports or filters out repeated lines in a file (the tool that helps detect adjacent duplicate lines and deletes duplicate lines).
 "sort" sorts the contents of a text file, can sort: alphabetically, in reverse order, by number, by month, and can remove duplicates.
@@ -89,7 +89,6 @@ Example: "cat file | sort | uniq" is the same as "sort < file | uniq"
 
 tee: a command name after T-shaped piping in real world plumbing. It passes the STDIN from another command's output through, while also writing a copy to a file. 
 Example: "cat animals | tee unsorted.txt | sort | uniq > sorted.txt" does the following: writes the output of cat animals into unsorted.txt and then writes the output of cat animals & sort & uniq into sorted.txt.
-
 
 
 

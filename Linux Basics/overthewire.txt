@@ -1,10 +1,18 @@
 Overthewire solutions:
 Level 0: "ssh bandit.labs.overthewire.org -p 2220 bandit0"
-Level 1: "cat readme"
-Level 2: "cat ./-" or "cat <-" (prints contents of file named "-")
-Level 3: "cat "spaces in file name" "
-Level 4: 
+Level 0->1: "cat readme"
+Level 1->2: "cat ./-" or "cat <-" (prints contents of file named "-")
+Level 2->3: "cat "spaces in file name" "
+Level 3->4: 
 	"cd inhere" to navigate into folder
 	"ls -a" to display all files and names
 	"cat ...Hiding-From-You" to display contents of hidden file
-Level 5: "cat ./-file00 ./-file01 ... ./-file09" either one by one 	 or all in one line
+Level 4->5: "cat ./-file00 ./-file01 ... ./-file09" either one by one 	 or all in one line
+Level 5->6: "cd inhere"
+	    "find ~/inhere -size 1033c" look for a file with 1033 	    byte size inside the inhere directory
+Level 6->7: "cd /" navigate to home terminal
+	   "find -size 33c -user bandit7 -group bandit6" shows all 	   files with 33byte size, owned by user bandit7 and owned  	   by group bandit6, then find the ones you have access to
+	    "cat ./var/lib/dpkg/info/bandit7.password" reads off the 	    password stored in the file
+Level 7->8: "grep -w "millionth" data.txt" finds the exact match for  	    the word "millionth" in data.txt
+Level 8->9: "sort data.txt | uniq -u" sorts the data alphabetically, 	    then finds any words that only occur once.
+

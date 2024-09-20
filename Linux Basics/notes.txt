@@ -1,12 +1,65 @@
 Linux Basics:
 
+Hacker Ethic: 
+6 beliefs:
+1. Access to computers and anything which might teach you something about the way of the world works should be unlimited and total. Always yield to the Hands-On Imperative.
+2. All information should be free.
+3. Mistrust authority, promote decantralization.
+4. Hackers should be judged by their hacking, not bogus criteria such as degrees, race, age, or position.
+5. You can create art and beauty on a computer. The concept of "hack value" is doing something that is worth doing because fo "playful cleverness" required.
+6. Computers can change your life for the better.
+
 Man Pages:
 a resource used to provide information about commands, their flags, and what they do. This is done via:
 "man [name of command]"
 For information about man pages use command :'man man'
 
+NETWORKING FUNDAMENTALS
 Networking
 "ip addr" shows ip address of the device youre on.
 localhost (127.0.0.1) is a non routable ip address for internal purposes.
 
 Routing
+"traceroute" traces the route from localhost to provided network host.
+Network Address Translation (NAT) is a method of mapping one IP address to another by modifying packets while they are in transit.
+NAT allows connections out and responses back but does not allow connections in.
+VM's can switch between NAT'd IP address and a Bridged IP address. Bridged IP addresses are IP addresses assigned by your local router which will be NAT'd by the router when you connect out. 
+NAT'd IP addresses are IP addresses assigned by your virtualization software, which puts that box behind a NAT (means if you are NAT'd another local computer will not be able to connect to you, but if youre bridged your IP address will be routable).
+
+Netcat (nc)
+A troubleshooting tool. Most common use is that you can send and recieve arbitrary data across a network.
+-To make a listening port use command "nc -lp ####" where #### is the number of the port you want to listen on.
+-Using echo "message" | nc localhost ####" you can send echos to the port specified by ####
+
+Exercise: on two terminals (a server and client) send a file and print it out.
+Solution: server: nc -lp 1337
+	  client: cat test.txt | nc localhost 1337
+Solution extra: to append lines to the file and then send it:
+echo "adding text" > test.txt | cat test.txt | nc localhost 1337
+This adds the phrase "adding text" to the end of test.txt, sends it to server, and prints it.
+
+Exercise: with a friend, connect to their box
+Solution: get ip addresses and make sure both boxes are on the same network, and change ip to bridged.
+
+-curl is a command that quickly grabs resources of a provided url.
+for an image download: "curl -o imagename.png url"
+
+-netstat is a command used to print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+
+-lsof is a command used to list open files
+
+Telnet: old-fashioned protocol which provides nice an easy shell accss to anyone running a telnet server (usually unauthenticated - wohoo). for star wars ep4: "telnet towel.blinkenlights.nl"
+
+SSH (Secure SHell)
+It is a networking protocol that allows encrypted access to remote computers. How it works: a remote computer (SSH server) listens for incoming connections, while the local computer sends a request via SSH protocl to log in to the server. If the password is correct, server will create a shell on the remote computer and pass the stream from that shell to the client. This way the client who logged on via SSH is able to have access to the remote computer in an ecnrypted manner. To SSH you can either use a password or a key.
+
+More Networking fundamentals:
+Resources: 
+-https://www.digitalocean.com/community/tutorials/an-introduction-to-networking-terminology-interfaces-and-protocols
+-https://www.geeksforgeeks.org/routing-tables-in-computer-network/
+Self exercise:
+-What is an interface?
+-What is IPV4 vs IPV6?
+-What is a MAC address?
+-How do routing tables work?
+-What is a protocol? What are some common protocols?

@@ -1,0 +1,10 @@
+Overthewire solutions:
+Level 0: "ssh bandit.labs.overthewire.org -p 2220 bandit0"
+Level 1: "cat readme"
+Level 2: "cat ./-" or "cat <-" (prints contents of file named "-")
+Level 3: "cat "spaces in file name" "
+Level 4: 
+	"cd inhere" to navigate into folder
+	"ls -a" to display all files and names
+	"cat ...Hiding-From-You" to display contents of hidden file
+Level 5: "cat ./-file00 ./-file01 ... ./-file09" either one by one 	 or all in one line

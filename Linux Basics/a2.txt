@@ -1,0 +1,12 @@
+Answers:
+1. Searches the name input files for lines containing a match to the given pattern. By default grep prints the matching lines highlighting the specified pattern.
+2. An interpreter for AWK programming language. Used for manipulation of data files, text retrieval and processing, and prototyping and experimenting with algorithms. it assumes the delimiter is a space.
+3. Stands for stream editor; used to perform basic text transformations on an input stream.
+
+
+Resources: 
+* 
+
+
+Feedback: 
+*

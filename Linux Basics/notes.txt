@@ -63,3 +63,54 @@ Self exercise:
 -What is a MAC address?
 -How do routing tables work?
 -What is a protocol? What are some common protocols?
+
+
+Text-Fu
+Useful Commands: 
+-head: prints top few lines of larger file
+-tail: prints last few lines of larger file
+-less: brings you to top of file and allows you to scroll or search through it
+-reset: if you break the terminal
+-clear: clears printed text
+-cut: remove sections from each line. 
+	-d: sets a delimiter (tells us what we will base the line 	split on). ex if -d " " then we separate based on spaces
+	-f: describes which columns we want, numbered from the 	delimiter
+	-c: gives character at specified value(s)
+	-b: gives character at specified byte
+-awk: an interpreter for AWK programming language. Used for manipulation of data files, text retrieval and processing, and prototyping and experimenting with algorithms. it assumes the delimiter is a space.
+	ex: cat textfile | awk {print $1" "$2" "$3} 
+	this prints the first three words separated by spaces in the 	file textfile.
+-sed: stream editor; used to perform basic text transformations on an input stream.
+-tr: translate, squeeze, and/or delete characters from stdin, writing to stdout. 
+	ex: $ cat animals |  awk '{print $1" "$2" "$3}' | tr 'd' 'a'
+	changes the letters d to a in specified words given by awk
+	ex2: cat animals |  awk '{print $1" "$2" "$3}' | tr 'do' 	'pi'
+	changes the letters do to pi in specified words given by awk
+-grep (global regular expression print): searches the name input files for lines containing a match to the given pattern. By default grep prints the matching lines highlighting the specified pattern.
+
+Text editors
+-gedit: a text editor with GUI, normal mouse use, copy/paste, similar to notepad on windows.
+-nano: super basic in terminal editor, good for minimal use.
+-vi/vim: builtin editor in most linux systems (vim is newer version of vi but they do basically the same thing)
+-emacs: another editor
+
+Text editors like vi/vim/emacs are special because of their extensibility and keyboard based shortcuts. This allows for programmers to speed up navigatio of a code base and type faster.
+
+grep:
+Stands for Global Regular Expression Print.
+-doing $ cat animals | grep "dog" is the same as $ grep "dog" animals
+-use * (known as wildcard) to search an entire directory.
+-the flag -l is used when you only want to know which files in a directory have the target word
+-the flag -n is used when you want to know the file name and line number
+-the flag -v is used when you only want to see the lines in the file which dont have the term you are greping for
+
+
+find: 
+Only deals with file information, not file content.
+-"-name" flag finds all files in given directory with that name
+-"-type f -name" finds all files in given directory with the type specified
+-"-perm" finds all files in given directory with permission specified
+-" / " searches from root
+-"-user" finds all files owned by specified user
+-"-size" finds all files with specified size
+-"mtime" finds all files modified in the specified time (in days)

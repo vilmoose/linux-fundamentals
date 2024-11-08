@@ -1,0 +1,13 @@
+Questions: 
+1. Write a command that will find all .html files on a computer that are 12 bytes in size, owned by "jake". 
+   * You can make an example file by putting the contents "is this html" into a file and saving it as a .html file. 
+   * However, getting the owner to be named Jake would require you to create a new user on your system and that is a bit of work
+   * I recommend you just write one that will find ones owned by you, and then for your answer, submit the "Jake" version.
+2. Write a command that finds any "hidden" (starts with . ) file in your user home folder. 
+
+Resources: 
+0. Google
+
+Answers:
+1. find -size 12c -user jake -type f ".html"
+2. find / -type f name ".*"

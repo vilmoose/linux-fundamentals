@@ -1,0 +1,19 @@
+Questions
+1.What is ASCII?
+2.What is binary?
+3.How many bits are used for each character in ASCII?
+4."01101000 01100101 01101100 01101100 01101111 00100001" is in binary. Convert it back to ASCII. Do it by hand using the chart.
+
+Answers:
+1. American Standard Code for Information Interchange: is a character encoding standard for electronic communication. ASCII codes represent text in computers. 
+2. A number system using base 2 numeral system to represent numbers. It uses only two symbols '0' and '1'. It is a positional notation with a radix of 2, and each digit is referred to as a bit.
+3. 8 bits represents a character.
+4. hello!
+
+Resources: 
+* https://en.wikipedia.org/wiki/Unix-like 
+* https://en.wikipedia.org/wiki/POSIX  
+
+Post-Questions: 
+* How does the kernel work? 
+* How different are Macs from Linux?  

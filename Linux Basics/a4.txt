@@ -1,0 +1,12 @@
+Questions: 
+1. Write the regex that will only select files with a string in it that matches the format: * any character, any number, case insensitive letter D, lowercase v, !. 
+   * Ignore all "," and " "" in that description for your actual regex 
+   * Example strings that would match this are: 
+      * s3Dv! 
+      * !0Dv! 
+      * 42Dv! 
+2. Write a command to run from the terminal that only searches for .html files and prints the line of any file that matches the regex you wrote for #1.
+
+Answer:
+1.  \*\s\.\d*\[Dv]!$
+2. grep '\*\s\.\d*\[Dv]!$' *.html

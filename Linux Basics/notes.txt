@@ -104,6 +104,32 @@ Stands for Global Regular Expression Print.
 -the flag -n is used when you want to know the file name and line number
 -the flag -v is used when you only want to see the lines in the file which dont have the term you are greping for
 
+Regex (Regular Expression): a technical way to define a particular search pattern, and grep is built around them. Always check which standard is being compiled with and modify your regex accordingly.
+-Alternate definition: are strings formatted using a special pattern and notation that allow you to describe and parse text. 
+-Metacharacters:
+-"^"(caret) and "$":represent the start and end of a line of text, respectively. When used together they allow you to match specific expression on a lin by itself. Ex: ^word$ would find only lines that contain "word".
+-"[]":known as character class, they let you match any of one several characters. If you use [^...] it negates the list, so it returns matches that aren't listed. Ex: gr[ea]y find matches for either the word gray or grey or gr[^iu]y returns matches that have any letters that are not i or u in between gr and y.
+-"-": indicates a range of characters. It is only a metacharacter within a character class, else it it is simply a dash. Ex: instead of [12345] we can write [1-5].
+-".": shorthand for a character class that matches any character. Only a metacharacter within a character class, else it is simply a dot.
+-"|" (pipe): means or. Allows you to combine multiple expressions into a single expression that matches any of the individual ones. The subexpressions are known as alternatives. Ex: Mike|Michael or you can shorten it: Mi(ke|chael).
+-"?": means optional. It is placed after a character that is allowed but not required. Ex: colou?r means that the letter u is optional in the word.
+-"+" and "*": affect the number of times the preceding character can appear in the expression. '+' matches one or more of the immediately preceding item and '*' matches any number of the preceding item including 0. Ex: go+al matches any expression such as goal, goooal, goooooooal, but gal.
+-"{}": Known as min, max, it allows you to specify the number of times a particular item can match by providing your own minimum and maximum. Ex: go{1,5}al would only allow up to goooooal.
+-"\": used to escape metacharacyer that have special meaning so you can match themin patterns. Ex: to match ? or \ characters you do '\?' or '\\'. 
+-"()": most tools will allow you to capture a particular subset of an expression with parenthesis. Ex: http://([^/]+) matches any character except for '/' one or more times after the exprssion 'http//'
+Some examples:
+    gr[ae]y = contains {gray, grey}
+    b[aeiou]bble = contains {babble, bebble, bibble, bobble, bubble}
+    [b-chm-pP]at|ot = contains {bat, cat, hat, mat, nat, oat, pat, Pat, ot}
+    z{3,6} = contains {zzz, zzzz, zzzzz, zzzzzz}
+    z{3,} = contains {zzz, zzzz, zzzzz, ...}
+    \d = contains {0,1,2,3,4,5,6,7,8,9}
+    \d+(.\d\d)? = contains a positive integer or a floating point number with    	exactly two characters after the decimal point.
+    1\d{10} = contains an 11-digit string starting with a 1
+    ^dog = begins with "dog"
+    dog$ = ends with "dog"
+    ^dog$ = is exactly "dog"
+If you ever need to check if your regex is correct use https://regex101.com/
 
 find: 
 Only deals with file information, not file content.
@@ -114,3 +140,16 @@ Only deals with file information, not file content.
 -"-user" finds all files owned by specified user
 -"-size" finds all files with specified size
 -"mtime" finds all files modified in the specified time (in days)
+
+Useful tips (Ubuntu):
+-Use Tab key to autocomplete when writing out files
+-'cd ~' takes you to home and 'cd -' takes you back to previous directory
+-'history' lets you look at most recent command history, combined with grep you can pup the two together and search your most recent commands
+-for long commands use the home and end keys or ctrl-a and ctrl-e to zoom to front and back
+-'!!' reruns previous command using sudo. '!' reruns the most recent of a specific command (ex: !ls reruns last ls used)
+-ctrl-c to kill a process. ctr-x to standby
+-ctrl-shift-t for a new terminal tab, ctrl-shift-n for new terminal window.
+
+
+
+

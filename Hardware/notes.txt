@@ -1,3 +1,6 @@
 Hardware
 
-Binary 
+Binary - I know this pretty well.
+
+
+Computers are deterministic. The idea of determinism is critical to seeing computers as something that can be tamed, controlled and understood. 

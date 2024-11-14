@@ -1,0 +1,15 @@
+Questions
+1. How long is a bit? A Byte? A megabyte?
+2. What is a bitwise operator? How do they work?
+3. What is a bit shift? How does that work?
+4. Explain how digital logic is an essential part of computing.
+5. What are logic gates?
+6. How do logic gates relate to bitwise operators?
+
+Answers
+1. A bit is either a 1 or 0, so 1 digit. A byte is 4 bits and a megabyte is 1,408,576 bytes.
+2. An operator that performs an operation using bits. They work by allowing you to perform precise manipulation of bits, giving you control of hardware operations. Consists of performing an operation on 2 bits and giving a result as a single bit.
+3. A bit shift is when you have a binary number and you move the bits to the right or left by a specific value. For example bit shift 1011 by 1 to the right results in 0101.
+4. Digital logic is necessary because you build combinational and sequential circuits using logic gates. By combining these logic gates you can create various circuits that allow the hardware to work (based on what circuit it is).
+5. An electronic circuit with two inputs and one output. Depending on the logic gate, the bits are compared and produce an appropriate output. 
+6. Logic gates are essentially bitwise operations being performed on electronic circuits. 

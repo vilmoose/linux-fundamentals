@@ -1,0 +1,5 @@
+Questions
+1. Describe the fetch-decode-execute cycle in words, explaining what all components and registers are doing. Keep it short, but include all the detail needed for you to draw it out and explain to someone.
+
+Answers:
+1. During the fetch phase the cpu is getting the registers it will work with and the instruction operation it will perform on said registers. During the decode phase, the cpu breaks down the operation and looks at each bit to understand what to execute and how. Lastly during the execute phase, the operation is performed on the operations 

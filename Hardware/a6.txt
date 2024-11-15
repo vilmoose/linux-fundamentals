@@ -1,0 +1,12 @@
+Questions
+
+1.Alright. Now. Convert 17 in Ascii to Binary and Hex. Do it by hand.
+2.Convert "Go Navy" to Octal, Hex, and Binary. Yes. By hand. Use Google to figure out how. This is supposed to not be fun.
+3. What does "c2l4dHlmb3Vy" translate to from Base64?
+
+Answers
+1. Binary: 10001 Hex: 11
+2. Binary: 01000111 01101111 01001110 01100001 01110110 01111001
+   Hex: 47 6F 4E 61 76 79
+   Octal: 107 157 116 141 166 171
+3. sixtyfour

@@ -1,0 +1,7 @@
+Questions
+1. Describe machine code and assembly
+2. What was Grace Hopper's primary contribution to computing?
+
+Answers
+1. Machine code is the binary code computers understand and execute directly, while assembly is a machine language represented in words.
+2. She came up with the idea to have written languages for humans to work with computers, rather than having to understand machine code.

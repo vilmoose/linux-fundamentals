@@ -1,0 +1,22 @@
+Explain all these modern computer components things. Put it in a text file.
+
+1. Motherboard
+2. PCI Slot
+3. CPU
+4. Why is a fan needed?
+5. RAM
+6. Hard Drive
+7. Optical Hard Drive
+8. Solid State Hard Drive
+9. Graphics Card
+
+Explanations
+1. The main PCB in a computer. It is the computers central communication backbone, through which all components and pheripherals connect.
+2. Known as the Peripheral Component Interconnect Slot, it is a bus that allows you to install a wide variety of expansion cards (graphics/video cards, sound cards, network cards) to the motherboard.
+3. Central Processing Unit, it is the component responsible for managing the computers operations and running the operating system.
+4. Fans are needed to cool down the components inside the computer, which can heat up the more they are used. 
+5. Random Access Memory, is a short term memory made up of registers that hold data inside them to run applications.
+6. Hard drive is a disk that holds digital data inside of it. 
+7. It is an electronic data storage that can be written and read from using a low powered laser beam.
+8. Small and fast disks that have the same functionality as hard drives (but are smaller in size).
+9. Graphics card is a processing card used for rendering images, videos and animations on a computer monitor.s
